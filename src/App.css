@@ -1,3 +1,11 @@
+* {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+  margin: 8px;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +43,31 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.main-heading {
+  text-align: center;
+  font-size: 25px;
+}
+
+.list-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.list-block__card {
+  padding: 5px;
+  border: 1px solid black;
+  Width: 30%;
+  margin-bottom: 10px;
+}
+
+.card__name {
+  font-size: 20px;
+  text-align: center;
+}
+
+.card__img {
+  width: 100%;
 }

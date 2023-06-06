@@ -1,24 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="list-block__card">
+        <p className="card__name">{props.name}</p>
+        <p className="card__universe">Вселенная: {props.universe}</p>
+        <p className="card__alterego">Альтерэго: {props.alterego}</p>
+        <p className="card__occupation">Род деятельности: {props.occupation}</p>
+        <p className="card__friends">Друзья: {props.friends}</p>
+        <p className="card__superpowers">Суперсилы: {props.superpowers}</p>
+        <img className="card__img" src={props.url} />
+        <p className="card__info">{props.info}</p>
+      </div>
   );
 }
 

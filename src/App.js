@@ -1,17 +1,29 @@
 import './App.css';
+import heroesList from './heroesList.js'
+import Title from './components/Title';
+import Card from './components/Card';
 
-function App(props) {
+function App() {
+
+  document.title = "Рейтинг супергероев"
   return (
-      <div className="list-block__card">
-        <p className="card__name">{props.name}</p>
-        <p className="card__universe">Вселенная: {props.universe}</p>
-        <p className="card__alterego">Альтерэго: {props.alterego}</p>
-        <p className="card__occupation">Род деятельности: {props.occupation}</p>
-        <p className="card__friends">Друзья: {props.friends}</p>
-        <p className="card__superpowers">Суперсилы: {props.superpowers}</p>
-        <img className="card__img" src={props.url} />
-        <p className="card__info">{props.info}</p>
-      </div>
+<>
+<Title />
+<div className="list-block">
+    {heroesList.map((superhero, index) => (
+      <Card 
+      name={superhero.name}
+      universe={superhero.universe}
+      alterego={superhero.alterego}
+      occupation={superhero.occupation}
+      friends={superhero.friends}
+      superpowers={superhero.superpowers} 
+      url={superhero.url}
+      info={superhero.info}
+      />
+    ))}
+  </div>
+  </>  
   );
 }
 
